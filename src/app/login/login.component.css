@@ -1,0 +1,40 @@
+.text-right.forget-pass a {
+  font-size: 12px;
+  color: #d39e00;
+  text-decoration: none;
+}
+
+.sign-up {
+  color: #fff;
+}
+
+.sign-up-link {
+  color: #000;
+}
+
+.card {
+  background-color: #3e3939;
+}
+
+.form-group label {
+  color: #fff;
+}
+
+.login-button-container {
+  margin-top: 10px;
+}
+
+.btn-my {
+  background-color: #71bac2;
+}
+
+  .sign-up a {
+    color: #fa47f1;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+.error-text {
+  color: #e03131;
+  font-weight: bold;
+}

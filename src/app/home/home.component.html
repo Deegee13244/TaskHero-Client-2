@@ -1,0 +1,74 @@
+
+
+<!-- fix the display of everything so it will fit in different media view ports: 
+also change the buttons so they are not edit and delete, but rather delete and mark off (or just mark off)
+also change the font. -- these are edits to be made later once functionality is achieved.  -->
+
+<div class="home">
+    <div class="dynamic-row">
+        <div class="dynamic-col-7 scrolly">
+            <div class="dynamic-row-2"> 
+                <mat-card class="dash1">
+                    <mat-card-content >
+                            <div *ngFor="let task of tasks" style="overflow-y: auto;">
+                                <div class="m-3">
+                                    <div class="p-2 shadow">
+                                        <div class="input-group row ps-3">
+                                            <div class="card item" style="margin-right: 1rem;"> {{task.Title}} </div>
+                                            <div class="btn col button_des1" style="height: 2rem; width: 2rem; min-width: 2rem; max-width: 2rem; margin-right: 1rem;">
+                                                <img src="/assets/icons/checkg.svg" style="height:100%; width: 50%; ">
+                                            </div>
+                                            <div class="btn col button_des2" style="height: 2rem; width: 2rem; min-width: 2rem; max-width: 2rem;">
+                                                <img src="/assets/icons/trash1.svg" style="height:100%; width: 45%; ">
+                                            </div>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="dynamic-row-2" style="padding-top: 2rem;"> 
+                <mat-card class="dash1">
+                    <mat-card-header class="fire-header"> 
+                        <div class="to-the-right">
+                            <div class="p-2">
+                              <span>{{streak + ending}}</span>
+                              <img src="{{streakPicture}}" class="image-streak" style="height:auto; width: 6rem;"/>
+                            </div>
+                        </div>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div style="overflow-y: auto; overflow-x: hidden;">
+                            <div class="m-3">
+                                <div class="p-2">
+                                  <progressbar class="achieve" [type]="'warning'" [value]="40" style="margin-bottom: 1rem;;">
+                                  </progressbar>
+                                </div>
+                                <div class="p-2">
+                                    <progressbar class="achieve" [type]="'warning'" [value]="40">
+                                    </progressbar>
+                                  </div>
+                            </div>
+                        </div> 
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <div class="dynamic-col-5" style="padding-left: 4rem;">
+            <div class="dynamic-row-other">
+                <mat-card class="dash2">
+                    <mat-card-content>
+                        <div class="container">
+                            <progressbar class="vertical" [value]="60"> 
+                            </progressbar>
+                        </div>
+                        <!-- <div class="prog_container"> -->
+                            <!-- <img src="/assets/gis/pink.gif" class="static_img"/> -->
+                        <!-- </div> -->
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
